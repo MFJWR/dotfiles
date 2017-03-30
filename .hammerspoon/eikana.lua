@@ -12,7 +12,7 @@ local function handleEvent(e)
     -- USキーボードの時のみ
     local keyboardType = e:getProperty(hs.eventtap.event.properties.keyboardEventKeyboardType)
 
-    if not(e:getFlags()['cmd']) and keyboardType == 40 then
+    if not(e:getFlags()['cmd']) and (keyboardType == 40 or keyboardType == 43) then -- 40 : HHKB Professional 43 : Macbook US Keyboard
         if prevKeyCode == leftCommand then
             hs.eventtap.keyStroke({}, eisuu)
         elseif prevKeyCode == rightCommand then
