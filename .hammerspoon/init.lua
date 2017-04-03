@@ -1,6 +1,6 @@
 require('watcher')
 require("sticky")
-require("eikana")
+--require("eikana")
 
 -- Window management
 local grid = require "grid"
