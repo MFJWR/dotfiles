@@ -1,4 +1,3 @@
-
 local prevKeyCode
 local escape = 0x35
 local leftCommand = 0x37

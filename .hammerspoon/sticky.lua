@@ -6,14 +6,14 @@ local function handleSticky(e)
     local keyCode = e:getKeyCode()
     local flags = e:getFlags()
 
-    if keyCode == 41 then
-        if flags['shift'] or sticky then
+    if keyCode == 41 then -- セミコロン
+        if flags['shift'] or sticky then -- シフト付き or sticky=true
             sticky = false
-        else
+        else -- セミコロン単独
             e:setKeyCode(-1)
             sticky = true
         end
-    else
+    else -- セミコロン以外
         if sticky then
             e:setFlags({shift=true})
             sticky = false
