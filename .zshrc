@@ -24,7 +24,7 @@ setopt APPEND_HISTORY
 #補完の時にベルを鳴らさない
 setopt NO_LIST_BEEP
 #^Dでログアウトしないようにする
-unsetopt IGNORE_EOF
+setopt IGNORE_EOF
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
