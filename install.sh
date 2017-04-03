@@ -1,6 +1,17 @@
 #!/bin/zsh
 
-emulate -R sh
+dots=(
+    "hammerspoon"
+    "zshrc"
+)
 
-ln -s "${PWD}/.hammerspoon" ~
-ln -s "${PWD}/.zshrc" ~
+for d in $dots; do
+    from="${HOME}/.${d}"
+    to="${PWD}/.${d}"
+
+    # ファイルが存在しない場合シンボリックリンクを作成
+    ln -s $to ~
+    if [ $? -eq 0 ]; then
+        echo "symlink created: ${from} -> ${to}"
+    fi
+done
