@@ -27,3 +27,8 @@ setopt NO_LIST_BEEP
 unsetopt IGNORE_EOF
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# エイリアス
+alias la='ls -la -G'
+alias ll='ls -l -G'
+export LSCOLORS=xbfxcxdxbxegedabagacad
