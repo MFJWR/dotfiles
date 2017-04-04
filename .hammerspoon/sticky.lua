@@ -2,9 +2,8 @@
 local sticky = false
 
 local function handleSticky(e)
-    if e:getKeyCode() == 41 then -- セミコロン
-        local flags = e:getFlags()
-        sticky = not(sticky) and not(flags['shift'])
+    if e:getKeyCode() == 41 and not e:getFlags()['shift'] then -- セミコロン単独, Shift押しは除外
+        sticky = not sticky
         if sticky then
             e:setKeyCode(-1)
         end
