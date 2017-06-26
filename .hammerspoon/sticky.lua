@@ -8,7 +8,11 @@ local function handleSticky(e)
             e:setKeyCode(-1)
         end
     elseif sticky then -- stickyが有効の時にセミコロン以外のキーが入力された
-        e:setFlags({shift=true})
+        if not (e:getKeyCode() == 5 and e:getFlags()['ctrl']) then -- ctrl + G でキャンセル
+            e:setFlags({shift=true})
+        else
+            e:setKeyCode(-1)
+        end
         sticky = false
     end
 end
