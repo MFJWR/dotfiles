@@ -1,0 +1,15 @@
+{
+    "editor.fontFamily": "Ricty Diminished",
+    "editor.fontSize": 17,
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "underline",
+    "ruby.interpreter.commandPath": "/Users/mfjwr/.rbenv/shims/ruby",
+    "ruby.pathToBundler": "/Users/mfjwr/.rbenv/shims/bundle",
+    "ruby.useBundler": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "ruby.format": "rufo",
+    "rufo.exe": "/Users/mfjwr/.rbenv/shims/rufo",
+    "workbench.colorTheme": "Monokai Classic",
+    "workbench.iconTheme": "Monokai Classic Icons"
+}
